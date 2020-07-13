@@ -8,6 +8,6 @@ If you only want to format the Jenkinsfile:
 
 ```shell
 docker build --tag groovy-lint .
-alias groovy-lint='docker run -v "$PWD":/home/alpine -ti groovy-lint'
-groovy-lint --format --files '**/Jenkinsfile' && dos2unix Jenkinsfile
+alias groovy-lint='docker run -u "$(id -u):$(id -g)" -w=/tmp  -v "$PWD":/tmp groovy-lint'
+groovy-lint --format --files '**/Jenkinsfile'
 ```
