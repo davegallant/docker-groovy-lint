@@ -1,8 +1,6 @@
-FROM alpine:3.12
+FROM alpine:3.12@sha256:a15790640a6690aa1730c38cf0a440e2aa44aaca9b0e8931a9f2b0d7cc90fd65
 
-ARG VERSION=5.4.2
-
-COPY .groovylintrc.json /etc/.groovylintrc.json
+ARG VERSION
 
 RUN apk add --update \
     bash \
@@ -11,6 +9,6 @@ RUN apk add --update \
     npm \
     openjdk8
 
-RUN npm i -g npm-groovy-lint@${VERSION}
+RUN npm i -g npm-groovy-lint@$VERSION
 
-ENTRYPOINT [ "npm-groovy-lint", "--config", "/etc/.groovylintrc.json" ]
+ENTRYPOINT "npm-groovy-lint"
