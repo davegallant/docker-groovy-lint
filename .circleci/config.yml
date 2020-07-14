@@ -1,0 +1,16 @@
+version: 2.1
+jobs:
+  lint:
+    docker:
+      - image: davegallant/npm-groovy-lint-test
+    steps:
+      - checkout
+
+      - run: |
+          npm-groovy-lint
+
+workflows:
+  version: 2
+  "lint":
+    jobs:
+       - lint
