@@ -4,4 +4,6 @@ Lint and format groovy files (including Jenkinsfile) by using a containerized ve
 
 ## archived
 
-This image has been moved to:  [npm-groovy-lint](https://github.com/nvuillam/npm-groovy-lint) and is published to https://hub.docker.com/r/nvuillam/npm-groovy-lint.
+Intructions have been moved to [npm-groovy-lint](https://github.com/nvuillam/npm-groovy-lint).
+
+Docker images are published to https://hub.docker.com/r/nvuillam/npm-groovy-lint.
